@@ -5,6 +5,10 @@
 
 trigger:
 - master
+- task: Docker@2
+  inputs:
+    command: 'buildAndPush'
+    Dockerfile: 'https://github.com/dockerfile/nginx/blob/master/Dockerfile'
 
 pool:
   vmImage: 'ubuntu-latest'
